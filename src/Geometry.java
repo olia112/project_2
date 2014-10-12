@@ -20,12 +20,12 @@ public class Geometry {
             l[i] = new Point(x, y);
         }
         for (int i=0;i<m;i++){
-            if (i==(m-1)){s=s+distance(l[i], l[0]);}
-            else s=s+distance(l[i], l[i+1]);
+            if (i==(m-1)){s=s+perimeter(l[i], l[0]);}
+            else s=s+perimeter(l[i], l[i+1]);
         }
         System.out.println("Периметр равен: " +s);
     }
-    public static double distance (Point p1, Point p2){
+    public static double perimeter (Point p1, Point p2){
         return Math.sqrt((p1.x-p2.x)*(p1.x-p2.x))+Math.sqrt((p1.y-p2.y)*(p1.y-p2.y));
 
     }
