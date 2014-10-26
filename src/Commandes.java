@@ -83,6 +83,6 @@ public class Commandes {
             list[l].email = e;
         } else System.out.println("Запись с таким индексом отсутствует");
     }
-    public void print (Address adr){
-        System.out.println("Имя: " + adr.name + " Телефон: " + adr.phone + " Email: " + adr.email);
+    public void print (Address entry){
+        System.out.println("Имя: " + entry.name + " Телефон: " + entry.phone + " Email: " + entry.email);
     }
