@@ -36,6 +36,14 @@ public class AddressbookManager {
                     System.out.println("Введите имя для поиска");
                     String t = in.next();
                     int[] dex = book.find(t);
+                    if (dex.length == 0) {
+                        System.out.println("Человек с таким именем в книге отсутствует");
+                    } else {
+                        for (int i = 0; i < dex.length; i++) {
+                            Address address = book.get(dex[i]);
+                            book.print(address);
+                        }
+                    }
                     continue;
                 case 3:
                     System.out.println("Введите индекс записи для поиска");
@@ -48,7 +56,9 @@ public class AddressbookManager {
                 case 4:
                     System.out.println("Введите индекс записи для удаления");
                     int x = in.nextInt();
+                    if (x < book.gecCount() && x>-1) {
                     book.delete(x);
+                    } else System.out.println("Запись с таким индексом отсутствует");
                     continue;
                 case 5:
                     if (book.gecCount() == 1) System.out.println("В адресной книге " + book.gecCount() + " запись");
@@ -60,7 +70,17 @@ public class AddressbookManager {
                     book.allprint();
                     continue;
                 case 7:
-                    book.izmenenie();
+                    System.out.println("Введите индекс записи");
+                    int vr = in.nextInt();
+                    if (vr < book.gecCount()) {
+                        System.out.println("Введите новое имя");
+                        String n1 = in.next();
+                        System.out.println("Введите новый телефон");
+                        String p1 = in.next();
+                        System.out.println("Введите новый email");
+                        String e1 = in.next();
+                        book.izmenenie(vr, n1, p1, e1);
+                    } else System.out.println("Запись с таким индексом отсутствует");
                     continue;
                 case 8:
                     System.exit(1);
