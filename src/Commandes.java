@@ -5,7 +5,6 @@ import java.util.Scanner;
  */
 public class Commandes {
     public Address[] list = new Address[0];
-    //public int[] t = new int[0];
 
     public void Add(Address newaddr) {
         Address[] newlist = new Address[list.length + 1];
@@ -27,13 +26,9 @@ public class Commandes {
                 }
                 w[j] = i;
                 j++;
-                //System.out.println("Индекс: " + i + ") Имя: " + list[i].name + " Телефон: " + list[i].phone + " Email: " + list[i].email);
                 t = w;
             }
         }
- //       if (t.length == 0) {
- //         System.out.println("Человек с таким именем в книге отсутствует");
- //       }
         return t;
     }
 
@@ -60,7 +55,6 @@ public class Commandes {
 
     public void allprint() {
         for (int i = 0; i < list.length; i++) {
-            // System.out.println(i + ") Имя: " + list[i].name + " Телефон: " + list[i].phone + " Email: " + list[i].email);
             System.out.print(i+") ");print(list[i]);
         }
 
