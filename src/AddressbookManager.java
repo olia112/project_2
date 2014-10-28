@@ -83,13 +83,11 @@ public class AddressbookManager {
                     } else System.out.println("Запись с таким индексом отсутствует");
                     continue;
                 case 8:
-                    System.exit(1);
-                    break;
+                    return;
                 default:
                     System.out.println("Введённое действие невозможно! Повторите попытку");
                     continue;
             }
-            break;
         }
     }
 }
