@@ -29,7 +29,7 @@ public class AddressbookManager {
                     System.out.println("Введите email");
                     String e = in.next();
                     Address a = new Address(n, p, e);
-                    book.Add(a);
+                    book.add(a);
 
                     continue;
                 case 2:
