@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Commandes {
     public Address[] list = new Address[0];
 
-    public void Add(Address newaddr) {
+    public void add(Address newaddr) {
         Address[] newlist = new Address[list.length + 1];
         for (int i = 0; i < list.length; i++) {
             newlist[i] = list[i];
