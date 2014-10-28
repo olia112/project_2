@@ -87,7 +87,7 @@ public class AddressbookManager {
                     break;
                 default:
                     System.out.println("Введённое действие невозможно! Повторите попытку");
-                    continue out;
+                    continue;
             }
             break;
         }
